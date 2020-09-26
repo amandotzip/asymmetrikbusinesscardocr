@@ -10,12 +10,7 @@ class BusinessCardParser:
     parsedName = "N/A"
     parsedPhoneNumber = "N/A"
     parsedEmail = "N/A"
-
-
-
-    # loops through input file and parses into strings list "lines"
-    # with open('.\examples\\02.txt') as file:
-    #     file_contents = file.read()
+  
 
     if len(sys.argv) == 1 or len(sys.argv) > 2:
         print("Too few or too many arguments. Try \"python BusinessCardParser -h\" for help")
