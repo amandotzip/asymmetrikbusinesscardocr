@@ -1,3 +1,5 @@
+#ContactInfo class that for storing and representing
+#parsed data
 class ContactInfo:
     
     #default constructor

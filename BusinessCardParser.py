@@ -1,4 +1,3 @@
-
 import requests
 import lxml.html as lh
 import pandas as pd
@@ -6,12 +5,16 @@ import re
 import sys
 from ContactInfo import ContactInfo
 
+#Business card parser class that when prvodied a legal text file arguemnt
+#parses information into ContactInfo object.
+
 class BusinessCardParser:
+    #initially n/a values
     parsedName = "N/A"
     parsedPhoneNumber = "N/A"
     parsedEmail = "N/A"
   
-
+    #If incorrect number of arguemnts reject input and suggest help command. Exit program
     if len(sys.argv) == 1 or len(sys.argv) > 2:
         print("Too few or too many arguments. Try \"python BusinessCardParser -h\" for help")
         sys.exit()
@@ -32,6 +35,8 @@ Business Card Parser OCR
     prints parsed data."""
         print(helpString)
         sys.exit()
+   
+   
     with open(sys.argv[1], 'r') as file:
         file_contents = file.read()
         
@@ -73,7 +78,7 @@ Business Card Parser OCR
             lines.remove(item)
 
 
-    #Data scraping top 50 most common names in order to parse names from Business Cards
+    #Data scraping top 100 most common names of men and women (so 200) in order to parse names from Business Cards
     #Names will be stored in topNames
     URL = "https://www.ssa.gov/oact/babynames/decades/century.html"
     page = requests.get(URL)
@@ -100,7 +105,7 @@ Business Card Parser OCR
 
     #Tidying data
     topNames = topNames[7:len(topNames)-1]
-    #If name is found in top 50 names, store and consume the value
+    #If name is found in top 100 names, store and consume the value
     for item in lines:
         if item.split()[0] in topNames:
             parsedName = item
