@@ -13,7 +13,9 @@ Required external packages (all quick pip installs)
 # Usage
 Simply compile and run using python with your argument being the text file you wish to parse
 
-You run python <address of business card parser file\> <text input file\>
+You run 
+    
+    python <address of business card parser file\> <text input file\>
 
 For Example on Windows: 
     
@@ -23,7 +25,7 @@ Or for help:
 
     python .\BusinessCardParser.py -h
 ## Test Functionality
-To test functionality, input via text file and run:
+To test functionality, run with the following input as text file argument:
 
     Bobby Builder
     test@work.com
