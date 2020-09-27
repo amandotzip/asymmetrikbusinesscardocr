@@ -22,7 +22,7 @@ For Example on Windows:
 Or for help:
 
     python .\BusinessCardParser.py -h
-
+## Test Functionality
 To test functionality, input via text file and run:
 
     Bobby Builder
@@ -30,6 +30,62 @@ To test functionality, input via text file and run:
     1234567890
 
 Then rearrange the order of the fields in any order and compare to see that the output is always the same.
+
+## More test data (from examples folder):
+
+01.txt input:
+
+    ASYMMETRIK LTD
+    Mike Smith
+    Senior Software Engineer
+    (410)555-1234
+    msmith@asymmetrik.com
+
+Output
+
+    Name: Mike Smith
+    Phone: 4105551234
+    Email: msmith@asymmetrik.com
+
+
+02.txt input: 
+
+    Foobar Technologies
+    Analytic Developer
+    Lisa Haung
+    1234 Sentry Road
+    Columbia, MD 12345
+    Phone: 410-555-1234
+    Fax: 410-555-4321
+    lisa.haung@foobartech.com
+
+Output: 
+
+    Name: Lisa Haung
+    Phone: 4105551234
+    Email: lisa.haung@foobartech.com
+
+03.txt input:
+
+    Arthur Wilson
+    Software Engineer
+    Decision & Security Technologies
+    ABC Technologies
+    123 North 11th Street
+    Suite 229
+    Arlington, VA 22209
+    Tel: +1 (703) 555-1259
+    Fax: +1 (703) 555-1200
+    awilson@abctech.com
+
+Output:
+
+    Name: Arthur Wilson
+    Phone: 17035551259
+    Email: awilson@abctech.com
+
+
+
 # Error Handling
 * Fields that are never provided will remain "N/A". 
 * Too few or too many arguments won't be allowed.
