@@ -15,7 +15,7 @@ Simply compile and run using python with your argument being the text file you w
 
 You run 
     
-    python <address of business card parser file\> <text input file\>
+    python <address of business card parser file> <text input file>
 
 For Example on Windows: 
     
