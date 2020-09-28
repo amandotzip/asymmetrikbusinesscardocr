@@ -11,7 +11,7 @@ Required external packages (all quick pip installs)
 * re
 
 # Usage
-Simply compile and run using python with your argument being the text file you wish to parse
+In a command-line interface such as windows cmd or linux, simply compile and run using python with your argument being the text file you wish to parse
 
 You run 
     
